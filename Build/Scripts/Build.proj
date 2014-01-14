@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <ImportedBuild>True</ImportedBuild>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <BuildPath>$(MSBuildProjectDirectory)\..</BuildPath>
+    <BuildExtensionsPath>$(BuildPath)\Extensions</BuildExtensionsPath>
+    <BuildRootPath>$(BuildPath)\..</BuildRootPath>
+    <BuildProjectsPath>$(BuildRootPath)\Projects</BuildProjectsPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Configuration>Release</Configuration>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <MSBuildCommunityTasksPath>$(BuildExtensionsPath)</MSBuildCommunityTasksPath>
+  </PropertyGroup>
+
+</Project>
