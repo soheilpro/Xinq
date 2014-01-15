@@ -1,2 +1,2 @@
-%WINDIR%\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe Scripts\Build.Package.proj /target:BuildPackage
+"%PROGRAMFILES(X86)%\MSBuild\12.0\Bin\MSBuild.exe" Scripts\Build.Package.proj /target:BuildPackage
 @PAUSE
