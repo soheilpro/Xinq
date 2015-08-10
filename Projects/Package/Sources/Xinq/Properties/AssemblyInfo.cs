@@ -8,4 +8,4 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyProduct("Xinq")]
 [assembly: AssemblyCopyright("Copyright 2007-2012 Soheil Rashidi")]
 [assembly: ComVisible(true)]     
-[assembly: AssemblyVersion("1.0.2")]
+[assembly: AssemblyVersion("1.0.3")]
