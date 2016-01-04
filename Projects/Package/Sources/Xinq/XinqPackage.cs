@@ -8,7 +8,7 @@ using VSLangProj80;
 namespace Xinq
 {
     [PackageRegistration(UseManagedResourcesOnly = true)]
-    [InstalledProductRegistration("#110", "#112", "1.0.2", IconResourceID = 400)]
+    [InstalledProductRegistration("#110", "#112", "1.0.4", IconResourceID = 400)]
     [ProvideXmlEditorChooserDesignerView("Xinq Designer", "xinq", LogicalViewID.Designer, 0x60, DesignerLogicalViewEditor = typeof(XinqEditorFactory), Namespace = "http://schemas.microsoft.com/developer/vstemplate/2005", MatchExtensionAndNamespace = false)]
     [ProvideEditorLogicalView(typeof(XinqEditorFactory), LogicalViewID.Designer)]
     [ProvideEditorExtension(typeof(XinqEditorFactory), ".xinq", 32, ProjectGuid = vsContextGuids.vsContextGuidVCSProject, NameResourceID = 105)]

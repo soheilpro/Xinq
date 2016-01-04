@@ -111,7 +111,7 @@ namespace Xinq
             queryClassCode.Name = "Query";
             queryClassCode.TypeAttributes = TypeAttributes.NotPublic;
 
-            var editorBrowsableAttributeCode = new CodeAttributeDeclaration(new CodeTypeReference(typeof(EditorBrowsableAttribute)), new CodeAttributeArgument(new CodeSnippetExpression("System.ComponentModel.EditorBrowsableState.Never")));
+            var editorBrowsableAttributeCode = new CodeAttributeDeclaration(new CodeTypeReference(typeof(EditorBrowsableAttribute)), new CodeAttributeArgument(new CodeSnippetExpression("global::System.ComponentModel.EditorBrowsableState.Never")));
             editorBrowsableAttributeCode.AttributeType.Options = CodeTypeReferenceOptions.GlobalReference;
             queryClassCode.CustomAttributes.Add(editorBrowsableAttributeCode);
 
