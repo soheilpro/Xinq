@@ -6,7 +6,7 @@ Xinq makes it extremely easy to manage database queries inside Visual Studio.
 
 ## Download
 
-- Visual Studio 2013/2015: [xinq-v1.0.4.vsix](https://github.com/soheilpro/Xinq/releases/download/v1.0.4/xinq-v1.0.4.vsix.zip)
+- Visual Studio 2013/2015/2017: [xinq-v1.0.5.vsix](https://github.com/soheilpro/Xinq/releases/download/v1.0.5/xinq-v1.0.5.vsix)
 - Visual Studio 2010/2012: [xinq-v1.0.2-vs10_11.vsix](https://github.com/soheilpro/Xinq/releases/download/v1.0.2-vs10_11/xinq-v1.0.2-vs10_11.vsix)
 
 ## Install
@@ -22,6 +22,9 @@ Double-click the downloaded .vsix file to install it.
    ```
 
 ## Version History
++ **1.0.5**
+  + Added support for Visual Studio 2017.
+  + Enabled scroll bars for the text editor.
 + **1.0.4**
   + Fixed a bug in generating the Queries class.
 + **1.0.3**
@@ -37,7 +40,7 @@ Double-click the downloaded .vsix file to install it.
 + http://github.com/soheilpro
 
 ## Copyright and License
-Copyright 2014 Soheil Rashidi
+Copyright 2018 Soheil Rashidi
 
 Licensed under the The MIT License (the "License");
 you may not use this work except in compliance with the License.
