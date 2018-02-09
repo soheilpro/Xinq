@@ -31,8 +31,9 @@ namespace Xinq {
             this.dgQueries = new System.Windows.Forms.DataGridView();
             this.dgcName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcComment = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtQuery = new QueryTextBox();
+            this.txtQuery = new Xinq.QueryTextBox();
             this.ToolStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SplitContainer)).BeginInit();
             this.SplitContainer.Panel1.SuspendLayout();
             this.SplitContainer.Panel2.SuspendLayout();
             this.SplitContainer.SuspendLayout();
@@ -42,6 +43,7 @@ namespace Xinq {
             // ToolStrip
             // 
             this.ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsAddQuery,
             this.tsRemoveQuery});
@@ -73,9 +75,9 @@ namespace Xinq {
             // 
             // SplitContainer
             // 
-            this.SplitContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.SplitContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.SplitContainer.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.SplitContainer.Location = new System.Drawing.Point(14, 49);
             this.SplitContainer.Margin = new System.Windows.Forms.Padding(0);
@@ -113,13 +115,13 @@ namespace Xinq {
             this.dgQueries.Size = new System.Drawing.Size(841, 209);
             this.dgQueries.StandardTab = true;
             this.dgQueries.TabIndex = 0;
-            this.dgQueries.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgQueries_UserDeletingRow);
             this.dgQueries.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgQueries_CellBeginEdit);
-            this.dgQueries.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgQueries_RowsAdded);
-            this.dgQueries.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dgQueries_CellValidating);
             this.dgQueries.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgQueries_CellEndEdit);
+            this.dgQueries.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dgQueries_CellValidating);
+            this.dgQueries.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgQueries_RowsAdded);
             this.dgQueries.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dgQueries_RowsRemoved);
             this.dgQueries.SelectionChanged += new System.EventHandler(this.dgQueries_SelectionChanged);
+            this.dgQueries.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgQueries_UserDeletingRow);
             // 
             // dgcName
             // 
@@ -155,7 +157,7 @@ namespace Xinq {
             // 
             // XinqEditor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.SplitContainer);
             this.Controls.Add(this.ToolStrip);
@@ -167,6 +169,7 @@ namespace Xinq {
             this.SplitContainer.Panel1.ResumeLayout(false);
             this.SplitContainer.Panel2.ResumeLayout(false);
             this.SplitContainer.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SplitContainer)).EndInit();
             this.SplitContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgQueries)).EndInit();
             this.ResumeLayout(false);
