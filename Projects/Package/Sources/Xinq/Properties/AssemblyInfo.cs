@@ -6,6 +6,6 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Soheil Rashidi")]
 [assembly: AssemblyProduct("Xinq")]
-[assembly: AssemblyCopyright("Copyright 2007-2018 Soheil Rashidi")]
+[assembly: AssemblyCopyright("Copyright 2007-2019 Soheil Rashidi")]
 [assembly: ComVisible(true)]
-[assembly: AssemblyVersion("1.0.5")]
+[assembly: AssemblyVersion("1.0.6")]
