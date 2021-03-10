@@ -22,6 +22,9 @@ Double-click the downloaded .vsix file to install it.
    ```
 
 ## Version History
++ **1.0.7**
+  + Added support for Visual Studio 2019.
+  + Fixed null exception when opening queries in Visual Studio 2019.
 + **1.0.5**
   + Added support for Visual Studio 2017.
   + Enabled scroll bars for the text editor.
