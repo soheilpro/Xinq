@@ -142,14 +142,14 @@ namespace Xinq
 
         public int IsDocDataDirty(out int pfDirty)
         {
-            pfDirty = _document.IsDirty ? 1 : 0;
+            pfDirty = _document?.IsDirty == true ? 1 : 0;
 
             return VSConstants.S_OK;
         }
 
         public int IsDocDataReadOnly(out int pfReadOnly)
         {
-            pfReadOnly = _document.IsReadOnly ? 1 : 0;
+            pfReadOnly = _document?.IsReadOnly == true ? 1 : 0;
 
             return VSConstants.S_OK;
         }
