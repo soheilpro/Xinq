@@ -2,3 +2,5 @@ Bin
 obj
 Xinq.suo
 Xinq.csproj.user
+Projects/Package/Sources/Xinq/packages
+.vs
