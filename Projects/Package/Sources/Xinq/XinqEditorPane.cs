@@ -21,7 +21,7 @@ namespace Xinq
         private bool _canEditGuard;
         private const int WM_ACTIVATEAPP = 0x1C;
 
-        public XinqEditorPane(XinqPackage package) : base(package)
+        public XinqEditorPane(XinqPackage package)
         {
             _package = package;
             _editor = new XinqEditor(package, this);

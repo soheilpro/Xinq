@@ -1,40 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
-  <Identifier Id="C2BD518B-C09A-401C-B9D0-93736786E488">
-    <Name>Xinq</Name>
-    <Author>Soheil Rashidi</Author>
-    <Version>1.0.5</Version>
-    <Description xml:space="preserve">Xml Integrated Query</Description>
-    <Locale>1033</Locale>
-    <Icon>XinqPackage.ico</Icon>
-    <InstalledByMsi>false</InstalledByMsi>
-    <SupportedProducts>
-      <VisualStudio Version="12.0">
-        <Edition>Ultimate</Edition>
-        <Edition>Premium</Edition>
-        <Edition>Pro</Edition>
-        <Edition>IntegratedShell</Edition>
-      </VisualStudio>
-      <VisualStudio Version="14.0">
-        <Edition>Community</Edition>
-        <Edition>Ultimate</Edition>
-        <Edition>Premium</Edition>
-        <Edition>Pro</Edition>
-        <Edition>IntegratedShell</Edition>
-      </VisualStudio>
-      <VisualStudio Version="15.0">
-        <Edition>Community</Edition>
-        <Edition>Ultimate</Edition>
-        <Edition>Premium</Edition>
-        <Edition>Pro</Edition>
-        <Edition>IntegratedShell</Edition>
-      </VisualStudio>
-    </SupportedProducts>
-    <SupportedFrameworkRuntimeEdition MinVersion="2.0" MaxVersion="4.0" />
-  </Identifier>
-  <References />
-  <Content>
-    <VsPackage>|%CurrentProject%;PkgdefProjectOutputGroup|</VsPackage>
-    <ItemTemplate>ItemTemplates</ItemTemplate>
-  </Content>
-</Vsix>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+	<Metadata>
+		<Identity Id="Xinq.487467cc-91cf-4e39-b3db-0f271d6ef177" Version="1.0.5" Language="en-US" Publisher="Soheil Rashidi" />
+		<DisplayName>Xinq</DisplayName>
+		<Description xml:space="preserve">Xml Integrated Query</Description>
+		<Icon>Resources\XinqPackage.ico</Icon>
+	</Metadata>
+	<Installation>
+		<InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[12.0,)" />
+	</Installation>
+	<Dependencies>
+		<Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+	</Dependencies>
+	<Prerequisites>
+		<Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[12.0,)" DisplayName="Visual Studio core editor" />
+	</Prerequisites>
+	<Assets>
+		<Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+		<Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="File" Path="ItemTemplates" d:TargetPath="ItemTemplates\XinqFileCSharp.zip" />
+		<Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="File" Path="ItemTemplates" d:TargetPath="ItemTemplates\XinqFileVB.zip" />
+	</Assets>
+</PackageManifest>
