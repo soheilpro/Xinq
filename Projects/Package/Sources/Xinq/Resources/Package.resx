@@ -144,7 +144,7 @@
     <comment>Displayed in the 'About' dialog as product name</comment>
   </data>
   <data name="111" xml:space="preserve">
-    <value>1.0.7</value>
+    <value>1.0.8</value>
     <comment>Displayed in the 'About' dialog as product version</comment>
   </data>
   <data name="112" xml:space="preserve">
