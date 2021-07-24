@@ -6,6 +6,8 @@ Xinq makes it extremely easy to manage database queries inside Visual Studio.
 
 ## Download
 
+- Visual Studio 2022: [xinq-v1.0.8.vsix](https://github.com/soheilpro/Xinq/releases/download/v1.0.8/xinq-v1.0.8.vsix)
+- Visual Studio 2019: [xinq-v1.0.7.vsix](https://github.com/soheilpro/Xinq/releases/download/v1.0.7/xinq-v1.0.7.vsix)
 - Visual Studio 2013/2015/2017: [xinq-v1.0.5.vsix](https://github.com/soheilpro/Xinq/releases/download/v1.0.5/xinq-v1.0.5.vsix)
 - Visual Studio 2010/2012: [xinq-v1.0.2-vs10_11.vsix](https://github.com/soheilpro/Xinq/releases/download/v1.0.2-vs10_11/xinq-v1.0.2-vs10_11.vsix)
 
@@ -22,6 +24,8 @@ Double-click the downloaded .vsix file to install it.
    ```
 
 ## Version History
++ **1.0.8**
+  + Added support for Visual Studio 2022.
 + **1.0.7**
   + Added support for Visual Studio 2019.
   + Fixed null exception when opening queries in Visual Studio 2019.
@@ -43,7 +47,7 @@ Double-click the downloaded .vsix file to install it.
 + http://github.com/soheilpro
 
 ## Copyright and License
-Copyright 2018 Soheil Rashidi
+Copyright 2021 Soheil Rashidi
 
 Licensed under the The MIT License (the "License");
 you may not use this work except in compliance with the License.
