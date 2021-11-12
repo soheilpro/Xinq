@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
+using System.Threading;
+using System.Threading.Tasks;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
@@ -7,23 +9,25 @@ using VSLangProj80;
 
 namespace Xinq
 {
-    [PackageRegistration(UseManagedResourcesOnly = true)]
+    [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
     [InstalledProductRegistration("#110", "#112", "1.0.7", IconResourceID = 400)]
     [ProvideXmlEditorChooserDesignerView("Xinq Designer", "xinq", LogicalViewID.Designer, 0x60, DesignerLogicalViewEditor = typeof(XinqEditorFactory), Namespace = "http://schemas.microsoft.com/developer/vstemplate/2005", MatchExtensionAndNamespace = false)]
     [ProvideEditorLogicalView(typeof(XinqEditorFactory), LogicalViewID.Designer)]
     [ProvideEditorExtension(typeof(XinqEditorFactory), ".xinq", 32, ProjectGuid = vsContextGuids.vsContextGuidVCSProject, NameResourceID = 105)]
     [ProvideEditorExtension(typeof(XinqEditorFactory), ".xinq", 32, ProjectGuid = vsContextGuids.vsContextGuidVBProject, NameResourceID = 105)]
     [Guid(GuidList.XinqPackageGuidString)]
-    internal sealed class XinqPackage : Package, IVsInstalledProduct
+    internal sealed class XinqPackage : AsyncPackage, IVsInstalledProduct
     {
         private XinqEditorFactory _editorFactory;
 
-        protected override void Initialize()
+        protected override async Task InitializeAsync(CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)
         {
             base.Initialize();
 
             _editorFactory = new XinqEditorFactory(this);
             RegisterEditorFactory(_editorFactory);
+
+            await JoinableTaskFactory.SwitchToMainThreadAsync(cancellationToken);
         }
 
         public string GetResourceString(uint id)
